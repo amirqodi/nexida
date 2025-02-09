@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --brandRed: #ff0000;
+    --articlebg: #d9d9d924;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  background: radial-gradient(circle, #1a1a1a 0%, #101010 100%);
+}
+
+.nav-li {
+  color: #e0e0e0;
+}
+
+.nav-li:hover {
+  color: white;
+}
+
+.under-span {
+  background: linear-gradient(90deg, #740000 0%, #b30000 49.65%, #5e0000 100%);
+}
+
+.gray-border {
+  border: 2px solid hsla(0, 0%, 50%, 0.6);
+  border-top: none;
+  border-bottom: none;
+}
