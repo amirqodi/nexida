@@ -1,7 +1,15 @@
 import type { Metadata } from "next";
+import { Figtree } from "next/font/google";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+
+const figtree = Figtree({
+  subsets: ["latin"], // Optimize for Latin characters
+  weight: ["400", "700"], // Load specific font weights
+  variable: "--font-figtree", // Define a CSS variable
+  display: "swap",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,9 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${figtree.variable} ${figtree.variable} antialiased`}>
         <Navbar />
         {children}
       </body>

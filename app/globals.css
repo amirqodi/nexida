@@ -23,6 +23,25 @@ body {
   background: radial-gradient(circle, #1a1a1a 0%, #101010 100%);
 }
 
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a; /* Track color */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0a0a0a; /* Thumb color */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0a0a0a; /* Thumb color on hover */
+}
+
 .nav-li {
   color: #e0e0e0;
 }

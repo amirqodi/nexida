@@ -15,21 +15,28 @@ const Article: React.FC<ArticleProps> = ({
   price,
 }) => {
   return (
-    <article className="bg-articlebg  rounded-lg shadow-lg flex flex-col items-center aspect-[5/6]">
-      <Image
-        src={image || "/default-image.jpg"}
-        alt={title}
-        className=" mb-1"
-        width={500}
-        height={600}
-      />
-      <h3 className="text-xl font-bold">{title}</h3>
-      <p className="text-gray-400 text-[12px] text-center mb-auto max-w-[450] mt-5">
-        {description}
-      </p>
-      <div className="my-4 w-full flex flex-col items-center justify-center">
-        <p className="text-lg font-bold">{price}</p>
-        <button className="bg-red-600 w-[90%] py-2 mt-2 rounded hover:bg-red-700">
+    <article className="bg-[#1a1a1a] rounded-lg shadow-lg flex flex-col items-center overflow-hidden max-w-sm">
+      {/* Product Image */}
+      <div className="w-full">
+        <Image
+          src={image || "/default-image.jpg"}
+          alt={title}
+          width={600}
+          height={350}
+          className="w-full object-cover rounded-t-lg"
+        />
+      </div>
+
+      {/* Content Section */}
+      <div className="p-5 text-center w-full">
+        <h3 className="text-white text-xl font-bold">{title}</h3>
+        <p className="text-gray-400 text-sm mt-2 h-32">{description}</p>
+
+        {/* Price */}
+        <p className="text-white text-lg font-bold mt-4">{price}</p>
+
+        {/* Buy Now Button */}
+        <button className="bg-red-600 w-full py-2 mt-4 rounded-md text-white font-semibold hover:bg-red-700 transition">
           Buy Now
         </button>
       </div>

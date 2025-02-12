@@ -1,10 +1,24 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [active, setActive] = useState("Home");
+
+  // Retrieve active tab from localStorage on mount
+  useEffect(() => {
+    const savedActiveTab = localStorage.getItem("activeTab");
+    if (savedActiveTab) {
+      setActive(savedActiveTab);
+    }
+  }, []);
+
+  // Update localStorage when active tab changes
+  const handleSetActive = (name: string) => {
+    setActive(name);
+    localStorage.setItem("activeTab", name);
+  };
 
   const navItems = [
     { name: "Home", href: "/" },
@@ -32,7 +46,7 @@ const Navbar = () => {
                 className={`nav-li relative ${
                   active === item.name ? "text-red-500" : "text-white"
                 }`}
-                onClick={() => setActive(item.name)}
+                onClick={() => handleSetActive(item.name)}
               >
                 {item.name}
               </Link>
