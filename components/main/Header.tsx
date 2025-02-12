@@ -59,6 +59,7 @@ const Header = () => {
           alt="character image"
           width={250}
           height={300}
+          className="mt-28"
         />
       </motion.picture>
     </section>
