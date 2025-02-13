@@ -1,6 +1,7 @@
 import React from "react";
 import { FaDiscord } from "react-icons/fa";
-import { IoGlobeOutline } from "react-icons/io5";
+import { FaTelegram } from "react-icons/fa6";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -9,7 +10,14 @@ const Footer = () => {
         {/* Logo and Socials */}
         <div className="flex flex-col items-center sm:items-start">
           <div className="flex items-center space-x-2">
-            <div className="text-red-500 text-2xl font-bold">N</div>
+            <div className="text-red-500 text-2xl font-bold">
+              <Image
+                width={45}
+                height={45}
+                src={"/UI/logo.png"}
+                alt="nexida logo"
+              />
+            </div>
           </div>
           <p className="mt-2">Check out our social media!</p>
           <div className="flex space-x-3 mt-3">
@@ -25,7 +33,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <IoGlobeOutline className="text-xl cursor-pointer hover:text-red-500 transition" />
+              <FaTelegram className="text-xl cursor-pointer hover:text-red-500 transition" />
             </a>
           </div>
         </div>
