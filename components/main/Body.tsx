@@ -108,7 +108,7 @@ const FeatureCard = ({
         <Image src={feature.icon} alt={feature.title} width={50} height={50} />
       </div>
       <h3 className="font-bold text-lg sm:text-xl">{feature.title}</h3>
-      <p className="text-gray-400 text-sm sm:text-base text-left">
+      <p className="text-gray-400 text-sm sm:text-base">
         {feature.description}
       </p>
     </motion.div>
@@ -133,13 +133,13 @@ const features = [
   {
     title: "Instant Access",
     description:
-      "Don&apos;t waste your time on registration forms. We have made the purchase form as simple as possible and also we cover a lot of payment methods. You definitely need to check it out!",
+      "Don't waste your time on registration forms. We have made the purchase form as simple as possible and also we cover a lot of payment methods. You definitely need to check it out!",
     icon: "/icons/Security.svg",
   },
   {
     title: "Easy To Use",
     description:
-      "The software installation process takes less than a minute and it doesn&apos;t require any actions from the user. The entire process is fully automated.",
+      "The software installation process takes less than a minute and it doesn't require any actions from the user. The entire process is fully automated.",
     icon: "/icons/Security.svg",
   },
   {

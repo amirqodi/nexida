@@ -95,7 +95,7 @@ const Footer = () => {
       </div>
 
       {/* Copyright Section */}
-      <div className="text-[10px] md:text-lg">
+      <div className="text-[10px] md:text-balance text-center text-gray-500 mt-5">
         © {new Date().getFullYear()} Nexida. All Rights Reserved.
       </div>
     </footer>

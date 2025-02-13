@@ -14,7 +14,7 @@ const Header = () => {
           transition={{ duration: 1 }}
           className="flex flex-col gap-y-5 mt-10 md:mt-[100px]"
         >
-          <h1 className="bg-custom-gradient mx-auto lg:mr-auto lg:ml-0 rounded-3xl p-1 flex items-center text-sm sm:text-base md:text-lg lg:text-xl">
+          <h1 className="bg-custom-gradient mx-auto lg:mr-auto lg:ml-0 rounded-3xl p-1 flex items-center text-sm sm:text-base md:text-lg lg:text-xl text-white">
             <Image
               src={"/icons/Ellipse.svg"}
               alt="icon"
@@ -24,7 +24,7 @@ const Header = () => {
             />
             NEXIDA PROJECT PREMIUM CHEATS
           </h1>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">
             <div className="flex items-center justify-center md:justify-start gap-2">
               Fastest
               <Image
@@ -41,7 +41,7 @@ const Header = () => {
           <p className="text-gray-300 leading-snug max-w-md mx-auto md:mx-0 text-sm sm:text-base md:text-lg pb-5">
             <span className="font-bold text-white">Nexida</span> is a
             cutting-edge project focused on providing advanced and undetectable
-            cheating solutions for
+            cheating solutions for <span> </span>
             <span className="font-bold text-white">
               Multi Theft Auto: San Andreas (MTA SA)
             </span>

@@ -38,11 +38,11 @@ const Navbar = () => {
     <section className="absolute w-full top-4 left-0 px-4 sm:px-6 md:px-20">
       <nav className="flex justify-between items-center py-4 relative">
         <div className="flex flex-col items-center justify-center text-center">
-          <h3 className="text-lg sm:text-xl md:text-2xl">
-            <span className="text-brandRed font-bold italic">NEXIDA</span>{" "}
+          <h3 className="text-lg sm:text-xl md:text-2xl text-white">
+            <span className="text-[#ff0000] font-bold italic">NEXIDA</span>{" "}
             PROJECT
           </h3>
-          <p className="text-xs sm:text-sm">Get Aura, Get Nexida.</p>
+          <p className="text-xs sm:text-sm text-white">Get Aura, Get Nexida.</p>
         </div>
 
         {/* Desktop Menu */}
@@ -124,7 +124,7 @@ const Navbar = () => {
 
         <Link
           href="/discord"
-          className="hidden md:block underline underline-offset-4 not-active text-sm md:text-base"
+          className="hidden md:block underline underline-offset-4 not-active text-sm md:text-base text-white"
         >
           Join our Discord
         </Link>

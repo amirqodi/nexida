@@ -21,7 +21,7 @@ const ProductsPage = () => {
     >
       <div className="mt-10 w-full max-w-6xl px-4 mb-10">
         <div className="flex w-full justify-between items-center">
-          <p className="text-3xl font-semibold text-center sm:text-left">
+          <p className="text-3xl font-semibold text-center sm:text-left text-white">
             Explore Products
           </p>
 
@@ -32,7 +32,7 @@ const ProductsPage = () => {
               placeholder="Search..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full max-w-md bg-articlebg px-4 py-2 border-0 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+              className="w-full max-w-md bg-[#d9d9d924] px-4 py-2 border-0 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
               whileFocus={{ scale: 1.05 }}
             />
           </div>
