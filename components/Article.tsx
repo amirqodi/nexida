@@ -30,7 +30,9 @@ const Article: React.FC<ArticleProps> = ({
       {/* Content Section */}
       <div className="p-5 text-center w-full">
         <h3 className="text-white text-xl font-bold">{title}</h3>
-        <p className="text-gray-400 text-sm mt-2 h-32">{description}</p>
+        <p className="text-gray-400 text-[12px] mt-2 h-32 md:text-sm">
+          {description}
+        </p>
 
         {/* Price */}
         <p className="text-white text-lg font-bold mt-4">{price}</p>

@@ -53,6 +53,7 @@ const ProductsPage = () => {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.5 }} // Animate removal
                   transition={{ duration: 0.4, ease: "easeOut" }}
+                  className="flex justify-center items-center"
                 >
                   <Article
                     title={product.title}
@@ -77,7 +78,9 @@ const ProductsPage = () => {
         </motion.div>
       </div>
       <footer className="flex items-center justify-center p-10 border-t border-[#ffffff1a] w-full">
-        <p>Copyright 2025 © Nexida Project</p>
+        <p className="text-[10px] md:text-lg">
+          Copyright 2025 © Nexida Project
+        </p>
       </footer>
     </motion.section>
   );

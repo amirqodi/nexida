@@ -32,7 +32,9 @@ const FAQ = () => {
         </div>
       </div>
       <footer className="flex items-center justify-center p-10 border-t border-[#ffffff1a] w-full">
-        <p>Copyright 2025 © Nexida Project</p>
+        <p className="text-[10px] md:text-lg">
+          Copyright 2025 © Nexida Project
+        </p>
       </footer>
     </>
   );

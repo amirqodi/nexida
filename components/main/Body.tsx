@@ -15,7 +15,7 @@ const Body = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <h3 className="font-bold text-lg">
+        <h3 className="font-bold text-lg sm:text-xl md:text-2xl">
           Choose A Reliable Cheat, For <br />
           Your Favorite Game!
         </h3>
@@ -31,9 +31,9 @@ const Body = () => {
           best possible assistant experience.
         </p>
 
-        <div className="grid grid-cols-3 gap-8 max-w-5xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl sm:w-auto w-[300px]">
           {features.map((feature, index) => (
-            <FeatureCard key={index} feature={feature} />
+            <FeatureCard index={index} feature={feature} key={index} />
           ))}
         </div>
       </section>
@@ -41,7 +41,7 @@ const Body = () => {
       {/* Products Section */}
       <section className="flex flex-col items-center w-full py-12">
         <h2 className="text-2xl font-bold text-center mb-6">Products</h2>
-        <div className="grid grid-cols-2 gap-32 max-w-8xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 md:gap-32 max-w-8xl">
           {products.map((product, index) => (
             <Article
               key={index}
@@ -80,7 +80,13 @@ type Feature = {
   border?: boolean;
 };
 
-const FeatureCard = ({ feature }: { feature: Feature }) => {
+const FeatureCard = ({
+  feature,
+  index,
+}: {
+  feature: Feature;
+  index: number;
+}) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.3,
@@ -92,15 +98,18 @@ const FeatureCard = ({ feature }: { feature: Feature }) => {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
       transition={{ duration: 0.5 }}
-      className={`flex flex-col items-center text-center px-10 ${
-        feature.border ? "gray-border" : ""
-      }`}
+      className={`flex flex-col items-center text-center px-6 py-6 
+        border-gray-500 border-opacity-50 
+        ${index !== features.length - 1 && index !== 2 ? "md:border-r" : ""} 
+        md:border-b-0 border-b md:last:border-r-0 last:border-b-0`}
     >
       <div className="text-4xl mb-2">
         <img src={feature.icon} alt={feature.title} />
       </div>
-      <h3 className="font-bold">{feature.title}</h3>
-      <p className="text-gray-400">{feature.description}</p>
+      <h3 className="font-bold text-lg sm:text-xl">{feature.title}</h3>
+      <p className="text-gray-400 text-sm sm:text-base text-left">
+        {feature.description}
+      </p>
     </motion.div>
   );
 };
