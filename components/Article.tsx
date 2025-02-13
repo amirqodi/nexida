@@ -19,7 +19,7 @@ const Article: React.FC<ArticleProps> = ({
       {/* Product Image */}
       <div className="w-full">
         <Image
-          src={image || "/default-image.jpg"}
+          src={image || "/default-image.png"}
           alt={title}
           width={600}
           height={350}
