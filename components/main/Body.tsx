@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Article from "../Article";
+import Image from "next/image";
 
 const Body = () => {
   return (
@@ -58,7 +59,7 @@ const Body = () => {
       <section className="flex flex-col items-center text-center py-12">
         <h3 className="text-xl font-bold mb-2">Have any questions?</h3>
         <p className="text-gray-400 mb-4">
-          We're here and happy to help you with anything you need.
+          We&apos;re here and happy to help you with anything you need.
         </p>
         <motion.button
           className="bg-red-600 px-6 py-2 rounded hover:bg-red-700"
@@ -104,7 +105,7 @@ const FeatureCard = ({
         md:border-b-0 border-b md:last:border-r-0 last:border-b-0`}
     >
       <div className="text-4xl mb-2">
-        <img src={feature.icon} alt={feature.title} />
+        <Image src={feature.icon} alt={feature.title} width={50} height={50} />
       </div>
       <h3 className="font-bold text-lg sm:text-xl">{feature.title}</h3>
       <p className="text-gray-400 text-sm sm:text-base text-left">
@@ -132,13 +133,13 @@ const features = [
   {
     title: "Instant Access",
     description:
-      "Don’t waste your time on registration forms. We have made the purchase form as simple as possible and also we cover a lot of payment methods. You definitely need to check it out!",
+      "Don&apos;t waste your time on registration forms. We have made the purchase form as simple as possible and also we cover a lot of payment methods. You definitely need to check it out!",
     icon: "/icons/Security.svg",
   },
   {
     title: "Easy To Use",
     description:
-      "The software installation process takes less than a minute and it doesn't require any actions from the user. The entire process is fully automated.",
+      "The software installation process takes less than a minute and it doesn&apos;t require any actions from the user. The entire process is fully automated.",
     icon: "/icons/Security.svg",
   },
   {

@@ -10,6 +10,13 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const router = useRouter();
 
+  const navItems = [
+    { name: "Home", href: "/" },
+    { name: "Products", href: "/products" },
+    { name: "FAQ", href: "/faq" },
+    { name: "Terms & Conditions", href: "/terms" },
+  ];
+
   useEffect(() => {
     const savedActiveTab = localStorage.getItem("activeTab");
     if (savedActiveTab && savedActiveTab !== "Home") {
@@ -26,13 +33,6 @@ const Navbar = () => {
     localStorage.setItem("activeTab", name);
     setMenuOpen(false);
   };
-
-  const navItems = [
-    { name: "Home", href: "/" },
-    { name: "Products", href: "/products" },
-    { name: "FAQ", href: "/faq" },
-    { name: "Terms & Conditions", href: "/terms" },
-  ];
 
   return (
     <section className="absolute w-full top-4 left-0 px-4 sm:px-6 md:px-20">
